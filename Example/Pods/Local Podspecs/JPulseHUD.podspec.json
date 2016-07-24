@@ -1,0 +1,22 @@
+{
+  "name": "JPulseHUD",
+  "version": "0.1.0",
+  "summary": "A short description of JPulseHUD.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/JPulseHUD",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Mark Jackson": "jacks205@mail.chapman.edu"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/JPulseHUD.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JPulseHUD/Classes/**/*"
+}

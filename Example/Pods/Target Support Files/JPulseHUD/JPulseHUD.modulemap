@@ -1,0 +1,6 @@
+framework module JPulseHUD {
+  umbrella header "JPulseHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

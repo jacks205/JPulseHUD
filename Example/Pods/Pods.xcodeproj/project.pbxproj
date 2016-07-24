@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01D7EBA13C1298739155A96933CFF612 /* Pods-JPulseHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E15365913C232489BE5ED7DED08B3 /* Pods-JPulseHUD_Example-dummy.m */; };
+		06BC48CFA8596C8F6FF6E5623EBA6DFF /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0084F3C6AA952B39C13FEDC66D607 /* ReplaceMe.swift */; };
+		0794D61F210A1792E65FFFA784029D93 /* JPulseHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D80AA0681E3DF7DE4A033998037CA /* JPulseHUD-dummy.m */; };
+		445854159E59DF922B276C0F59160614 /* JPulseHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DF979E984A8F10E2F5BA477B8C7D1E /* JPulseHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46F9751464F8FF9904CC6C6876800624 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		709710EE6AC346021FCE6CA0F9ADBFC4 /* Pods-JPulseHUD_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E39081D2F6785D8969AD02E23D329A7 /* Pods-JPulseHUD_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F020EE310E7D35BD1CED714BFBF1871 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		A4D0A3B77E5D7302B127ED3DC2BB577A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		BD196AE5F1B4FD91D4D4A7C218B21B58 /* Pods-JPulseHUD_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E76D3E3F99ACCDE52E13B0B92A8F42 /* Pods-JPulseHUD_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F770DC5151F5A0CDC26BAC568D63E60D /* Pods-JPulseHUD_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A86747267713DAD33FF21C3EE793C4F5 /* Pods-JPulseHUD_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D73D8531352104A789F2BE974FCDEFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B400A6B6AF8D4DC268C53B234DCCDE1;
+			remoteInfo = JPulseHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003E1FEDCE9263FB111CEFDD5DEB4866 /* Pods_JPulseHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPulseHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		174757F019F8CE2E3312F54A24EFFB90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8B2F70DE8221819A57D44405CC1A15 /* Pods-JPulseHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPulseHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1EC9D8B52135EBAA07B59D9E5AF60FD1 /* Pods-JPulseHUD_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JPulseHUD_Tests.modulemap"; sourceTree = "<group>"; };
+		21F76F480513C5CAA8D2AD72EF65C6F0 /* Pods-JPulseHUD_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JPulseHUD_Example.modulemap"; sourceTree = "<group>"; };
+		255D80AA0681E3DF7DE4A033998037CA /* JPulseHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JPulseHUD-dummy.m"; sourceTree = "<group>"; };
+		2F34A2B9D2DF79E86CF64C929D19F51B /* Pods-JPulseHUD_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPulseHUD_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4036D66627CE1E2978C07CB25D6665C3 /* Pods-JPulseHUD_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPulseHUD_Example-frameworks.sh"; sourceTree = "<group>"; };
+		57DF979E984A8F10E2F5BA477B8C7D1E /* JPulseHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPulseHUD-umbrella.h"; sourceTree = "<group>"; };
+		6246552909B3E67D1B9A378D38AE9839 /* JPulseHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JPulseHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		675E57EC2904A555604B92CC771B1763 /* Pods-JPulseHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPulseHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		69A0084F3C6AA952B39C13FEDC66D607 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		7164C75EA92EB6EB75362E904352467C /* Pods-JPulseHUD_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPulseHUD_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		76D89D69D58F78C6D72EDD7A520BF5FB /* Pods_JPulseHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPulseHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79575FA003887984D843CA0B5D64E1A8 /* JPulseHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPulseHUD-prefix.pch"; sourceTree = "<group>"; };
+		88DC1AC6614AAB8C01F14850D8840C3B /* Pods-JPulseHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPulseHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8E0E15365913C232489BE5ED7DED08B3 /* Pods-JPulseHUD_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPulseHUD_Example-dummy.m"; sourceTree = "<group>"; };
+		8E39081D2F6785D8969AD02E23D329A7 /* Pods-JPulseHUD_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPulseHUD_Tests-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94E76D3E3F99ACCDE52E13B0B92A8F42 /* Pods-JPulseHUD_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JPulseHUD_Example-umbrella.h"; sourceTree = "<group>"; };
+		A54ACA310D91756851B06FB4F517096B /* JPulseHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JPulseHUD.modulemap; sourceTree = "<group>"; };
+		A561979C2BE1B19C55C288A090C5AA6D /* Pods-JPulseHUD_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPulseHUD_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A86747267713DAD33FF21C3EE793C4F5 /* Pods-JPulseHUD_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JPulseHUD_Tests-dummy.m"; sourceTree = "<group>"; };
+		A90C8A75EF98DA1163FDFC27BAE2E48C /* Pods-JPulseHUD_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPulseHUD_Example-resources.sh"; sourceTree = "<group>"; };
+		B8B0C7D9D986392551CDB4ECCF9073A6 /* Pods-JPulseHUD_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPulseHUD_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D0D6B86D9FD3E0557A83120702A2A3A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E7168FB534B8C7DB7E160418D80D52 /* Pods-JPulseHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPulseHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D959D0E0C43C0DCBF1D8F76705B66817 /* Pods-JPulseHUD_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPulseHUD_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DC9E4B8D8BCCCC042FD0A90C7F7FBC60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPulseHUD.xcconfig; sourceTree = "<group>"; };
+		EB557FC4AA604D243D1D72917C965B7F /* Pods-JPulseHUD_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPulseHUD_Tests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A4A767316F9557CBF80E843F41C23E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F9751464F8FF9904CC6C6876800624 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8103BE58BA463C0C3FEB1A891109C871 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F020EE310E7D35BD1CED714BFBF1871 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6FA60CB6A0E67F9C1846FE6F9F7516E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D0A3B77E5D7302B127ED3DC2BB577A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DDBA4BE3CAB036E4EB23C5CB97C29F8 /* JPulseHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1AFE566F1482E1493C7563197405A38F /* Classes */,
+			);
+			path = JPulseHUD;
+			sourceTree = "<group>";
+		};
+		1AFE566F1482E1493C7563197405A38F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				69A0084F3C6AA952B39C13FEDC66D607 /* ReplaceMe.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2A1347321948C6C0E30B336B1B447444 /* JPulseHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0DDBA4BE3CAB036E4EB23C5CB97C29F8 /* JPulseHUD */,
+				5E99EF6A8E29932DC06CDAC26DBCF09F /* Support Files */,
+			);
+			name = JPulseHUD;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2D815215C3A7C05709B42E3D46F153C5 /* Pods-JPulseHUD_Example */ = {
+			isa = PBXGroup;
+			children = (
+				174757F019F8CE2E3312F54A24EFFB90 /* Info.plist */,
+				21F76F480513C5CAA8D2AD72EF65C6F0 /* Pods-JPulseHUD_Example.modulemap */,
+				2F34A2B9D2DF79E86CF64C929D19F51B /* Pods-JPulseHUD_Example-acknowledgements.markdown */,
+				A561979C2BE1B19C55C288A090C5AA6D /* Pods-JPulseHUD_Example-acknowledgements.plist */,
+				8E0E15365913C232489BE5ED7DED08B3 /* Pods-JPulseHUD_Example-dummy.m */,
+				4036D66627CE1E2978C07CB25D6665C3 /* Pods-JPulseHUD_Example-frameworks.sh */,
+				A90C8A75EF98DA1163FDFC27BAE2E48C /* Pods-JPulseHUD_Example-resources.sh */,
+				94E76D3E3F99ACCDE52E13B0B92A8F42 /* Pods-JPulseHUD_Example-umbrella.h */,
+				88DC1AC6614AAB8C01F14850D8840C3B /* Pods-JPulseHUD_Example.debug.xcconfig */,
+				D4E7168FB534B8C7DB7E160418D80D52 /* Pods-JPulseHUD_Example.release.xcconfig */,
+			);
+			name = "Pods-JPulseHUD_Example";
+			path = "Target Support Files/Pods-JPulseHUD_Example";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		499EB80C51217C80389786D42568E277 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A1347321948C6C0E30B336B1B447444 /* JPulseHUD */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5E35A94528ACB7D7568B320B6506A48D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6246552909B3E67D1B9A378D38AE9839 /* JPulseHUD.framework */,
+				76D89D69D58F78C6D72EDD7A520BF5FB /* Pods_JPulseHUD_Example.framework */,
+				003E1FEDCE9263FB111CEFDD5DEB4866 /* Pods_JPulseHUD_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E99EF6A8E29932DC06CDAC26DBCF09F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC9E4B8D8BCCCC042FD0A90C7F7FBC60 /* Info.plist */,
+				A54ACA310D91756851B06FB4F517096B /* JPulseHUD.modulemap */,
+				E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */,
+				255D80AA0681E3DF7DE4A033998037CA /* JPulseHUD-dummy.m */,
+				79575FA003887984D843CA0B5D64E1A8 /* JPulseHUD-prefix.pch */,
+				57DF979E984A8F10E2F5BA477B8C7D1E /* JPulseHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JPulseHUD";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				499EB80C51217C80389786D42568E277 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5E35A94528ACB7D7568B320B6506A48D /* Products */,
+				DE29B83A51B82D3531C46294927BBD19 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9A89128F9444A99D1C22A4BEBAD922C7 /* Pods-JPulseHUD_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D6B86D9FD3E0557A83120702A2A3A2 /* Info.plist */,
+				1EC9D8B52135EBAA07B59D9E5AF60FD1 /* Pods-JPulseHUD_Tests.modulemap */,
+				7164C75EA92EB6EB75362E904352467C /* Pods-JPulseHUD_Tests-acknowledgements.markdown */,
+				D959D0E0C43C0DCBF1D8F76705B66817 /* Pods-JPulseHUD_Tests-acknowledgements.plist */,
+				A86747267713DAD33FF21C3EE793C4F5 /* Pods-JPulseHUD_Tests-dummy.m */,
+				B8B0C7D9D986392551CDB4ECCF9073A6 /* Pods-JPulseHUD_Tests-frameworks.sh */,
+				EB557FC4AA604D243D1D72917C965B7F /* Pods-JPulseHUD_Tests-resources.sh */,
+				8E39081D2F6785D8969AD02E23D329A7 /* Pods-JPulseHUD_Tests-umbrella.h */,
+				1A8B2F70DE8221819A57D44405CC1A15 /* Pods-JPulseHUD_Tests.debug.xcconfig */,
+				675E57EC2904A555604B92CC771B1763 /* Pods-JPulseHUD_Tests.release.xcconfig */,
+			);
+			name = "Pods-JPulseHUD_Tests";
+			path = "Target Support Files/Pods-JPulseHUD_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE29B83A51B82D3531C46294927BBD19 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D815215C3A7C05709B42E3D46F153C5 /* Pods-JPulseHUD_Example */,
+				9A89128F9444A99D1C22A4BEBAD922C7 /* Pods-JPulseHUD_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		83B26064487BFEC2A439881E519357EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				445854159E59DF922B276C0F59160614 /* JPulseHUD-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7FFE9070D4339962C8C30E9695EF358 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD196AE5F1B4FD91D4D4A7C218B21B58 /* Pods-JPulseHUD_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBCAA0FC7B24BAD75A093B79F398371 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				709710EE6AC346021FCE6CA0F9ADBFC4 /* Pods-JPulseHUD_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B400A6B6AF8D4DC268C53B234DCCDE1 /* JPulseHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2BA4101D9ADFBA5CE902B1B9106CB8 /* Build configuration list for PBXNativeTarget "JPulseHUD" */;
+			buildPhases = (
+				1405E95DDD2F56C207E05CD78A46B10B /* Sources */,
+				5A4A767316F9557CBF80E843F41C23E3 /* Frameworks */,
+				83B26064487BFEC2A439881E519357EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPulseHUD;
+			productName = JPulseHUD;
+			productReference = 6246552909B3E67D1B9A378D38AE9839 /* JPulseHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9FFFC4820FB57D0FE05F69023081D49F /* Pods-JPulseHUD_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF549D37C310E5B69A8F00BAF87EA39 /* Build configuration list for PBXNativeTarget "Pods-JPulseHUD_Tests" */;
+			buildPhases = (
+				EE6AA5F611995CD5A1D959B65BF8AD70 /* Sources */,
+				8103BE58BA463C0C3FEB1A891109C871 /* Frameworks */,
+				FEBCAA0FC7B24BAD75A093B79F398371 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JPulseHUD_Tests";
+			productName = "Pods-JPulseHUD_Tests";
+			productReference = 003E1FEDCE9263FB111CEFDD5DEB4866 /* Pods_JPulseHUD_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAD2826CD2C57290A72D624C39819B1C /* Pods-JPulseHUD_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4334BAC750154DCB70EE34338BEAF5F0 /* Build configuration list for PBXNativeTarget "Pods-JPulseHUD_Example" */;
+			buildPhases = (
+				C9D79D19404624A5699B652E30786D99 /* Sources */,
+				E6FA60CB6A0E67F9C1846FE6F9F7516E /* Frameworks */,
+				B7FFE9070D4339962C8C30E9695EF358 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47771F06B39AE17F88164058A7C4B8BF /* PBXTargetDependency */,
+			);
+			name = "Pods-JPulseHUD_Example";
+			productName = "Pods-JPulseHUD_Example";
+			productReference = 76D89D69D58F78C6D72EDD7A520BF5FB /* Pods_JPulseHUD_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5E35A94528ACB7D7568B320B6506A48D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B400A6B6AF8D4DC268C53B234DCCDE1 /* JPulseHUD */,
+				EAD2826CD2C57290A72D624C39819B1C /* Pods-JPulseHUD_Example */,
+				9FFFC4820FB57D0FE05F69023081D49F /* Pods-JPulseHUD_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1405E95DDD2F56C207E05CD78A46B10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0794D61F210A1792E65FFFA784029D93 /* JPulseHUD-dummy.m in Sources */,
+				06BC48CFA8596C8F6FF6E5623EBA6DFF /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D79D19404624A5699B652E30786D99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D7EBA13C1298739155A96933CFF612 /* Pods-JPulseHUD_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6AA5F611995CD5A1D959B65BF8AD70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F770DC5151F5A0CDC26BAC568D63E60D /* Pods-JPulseHUD_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47771F06B39AE17F88164058A7C4B8BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JPulseHUD;
+			target = 4B400A6B6AF8D4DC268C53B234DCCDE1 /* JPulseHUD */;
+			targetProxy = 0D73D8531352104A789F2BE974FCDEFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A46FE3ACBABED5499BB1BFBE9511DFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4E7168FB534B8C7DB7E160418D80D52 /* Pods-JPulseHUD_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JPulseHUD_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPulseHUD_Example/Pods-JPulseHUD_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JPulseHUD_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BFEB7337D96AF5BB31C65E9F8A47711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DC1AC6614AAB8C01F14850D8840C3B /* Pods-JPulseHUD_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JPulseHUD_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPulseHUD_Example/Pods-JPulseHUD_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JPulseHUD_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		49C84B712D5013333CB9A8E1E6359818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JPulseHUD/JPulseHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JPulseHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JPulseHUD/JPulseHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JPulseHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6835687134E90E1AC04F2B1F24A0920F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675E57EC2904A555604B92CC771B1763 /* Pods-JPulseHUD_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JPulseHUD_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPulseHUD_Tests/Pods-JPulseHUD_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JPulseHUD_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D7366197210C50B8C76C47780074C328 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JPulseHUD/JPulseHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JPulseHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JPulseHUD/JPulseHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JPulseHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DEFB0F1D23EFF4B8FA51A72B9C212068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A8B2F70DE8221819A57D44405CC1A15 /* Pods-JPulseHUD_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JPulseHUD_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JPulseHUD_Tests/Pods-JPulseHUD_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JPulseHUD_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4334BAC750154DCB70EE34338BEAF5F0 /* Build configuration list for PBXNativeTarget "Pods-JPulseHUD_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BFEB7337D96AF5BB31C65E9F8A47711 /* Debug */,
+				0A46FE3ACBABED5499BB1BFBE9511DFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF549D37C310E5B69A8F00BAF87EA39 /* Build configuration list for PBXNativeTarget "Pods-JPulseHUD_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEFB0F1D23EFF4B8FA51A72B9C212068 /* Debug */,
+				6835687134E90E1AC04F2B1F24A0920F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB2BA4101D9ADFBA5CE902B1B9106CB8 /* Build configuration list for PBXNativeTarget "JPulseHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49C84B712D5013333CB9A8E1E6359818 /* Debug */,
+				D7366197210C50B8C76C47780074C328 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
