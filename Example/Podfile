@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JPulseHUD_Example' do
+  pod 'JPulseHUD', :path => '../'
+
+  target 'JPulseHUD_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
