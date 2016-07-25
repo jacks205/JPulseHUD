@@ -8,24 +8,54 @@
 
 import UIKit
 
-public typealias JPulseHUDCompletion = () -> Void
+/// Tuple that represents the required values of an class extending JPulseNumberGenerator.
+/// - parameter radius: Describes the max size of the pulse circle layer.
+/// - parameter duration: The duration of the layer animation.
+/// - parameter delay: The delay of when the layer enimation will execute.
+/// - parameter opacity: Opacity of the layer.
 public typealias JPulseNumberGeneratorValues = (radius: CGFloat, duration: Double, delay: Double, opacity: CGFloat)
 
+/// Default pulse timing animation. Can be changed through `JPulseHUD`.
+internal var animationTimingFunction = CAMediaTimingFunction(controlPoints: 0.23, 1.0, 0.32, 1.0)
+
+/**
+ *  Protocol for constructing a custom sequence of values to determine the pulse rhythm.
+ */
 public protocol JPulseNumberGenerator {
+    /// Seed object that will determine the random sequence of values.
     var seed: AnyObject { get set }
-    var seedString: String { get }
     
+    /// Values generated based off seed.
     var values: [JPulseNumberGeneratorValues] { get }
     
+    /**
+     Updates the seed. Can leave blank if seed doesn't require to be updated.
+     */
     func updateSeed()
-    
-    func calculateValues(seed: AnyObject) -> [JPulseNumberGeneratorValues]
 }
 
+/**
+   Displays a transparent view over its superview and emits a circle pulse animation.
+ 
+   This class is used for displaying a progress/loading indicator to the user during network or background thread work.
+ 
+   Simple Usage:
+   ```
+       JPulseHUD.addHUDToView(view)
+ 
+       // background thread work
+       // invoke main thread
+ 
+       JPulseHUD.removeHUDFromView(view)
+   ```
+ */
 public class JPulseHUD: UIView {
     
     //MARK: - Properties
     
+    /// Timing function for pulse animations.
+    ///
+    /// Default: `CAMediaTimingFunction(controlPoints: 0.23, 1.0, 0.32, 1.0)`
     public var timingFunction: CAMediaTimingFunction {
         get {
             return animationTimingFunction
@@ -35,9 +65,26 @@ public class JPulseHUD: UIView {
         }
     }
     
+    /// Duration for HUD to be fade out and be removed when `hide(animated: true)`
+    ///
+    /// Default: `1.0`
     public var hideAnimationDuration = 1.0
     
-    public var pulseDurationOffset = 0.0
+    /// Duration offset for easily quickening or slowing down pulse animation speed.
+    ///
+    /// Default: `0.0`
+    public var pulseDurationOffset = 0.0 {
+        didSet {
+            if let pulseNumberGenerator = pulseNumberGenerator as? JPulseDateNumberGenerator {
+                pulseNumberGenerator.durationOffset = pulseDurationOffset
+            }
+        }
+    }
+    
+    /// Custom JPulseNumberGenerator for building custom number sequences for the pulse animation.
+    ///
+    /// Default: `JPulseDateNumberGenerator()`
+    public var pulseNumberGenerator: JPulseNumberGenerator = JPulseDateNumberGenerator()
     
     //MARK: - Initializers
     
@@ -51,12 +98,28 @@ public class JPulseHUD: UIView {
         initialize()
     }
     
+    /**
+     Initializer for setting properties of HUD.
+     */
     private func initialize() {
         backgroundColor = UIColor.clearColor()
+        if let pulseNumberGenerator = pulseNumberGenerator as? JPulseDateNumberGenerator {
+            pulseNumberGenerator.width = frame.width
+            pulseNumberGenerator.durationOffset = pulseDurationOffset
+        }
     }
     
     //MARK: - Static Functions
 
+    /**
+     Adds HUD to view as a subview and starts animation.
+     
+     Hide HUD by calling:
+     ```
+     JPulseHUD.removeHUDFromView(view)
+     ```
+     - parameter view: view to present HUD on.
+     */
     public static func addHUDToView(view: UIView) {
         let currentHud = hudFromView(view)
         guard currentHud == nil else {
@@ -67,6 +130,14 @@ public class JPulseHUD: UIView {
         hud.show()
     }
     
+    /**
+     Removes HUD from view if it exists.
+     
+     - parameter view:     view to remove HUD from.
+     - parameter animated: animates HUD by fading out based on `hideAnimationDuration`.
+     
+     - returns: Bool indicating if HUD was successfully removed.
+     */
     public static func removeHUDFromView(view: UIView, animated: Bool) -> Bool {
         let hud = hudFromView(view)
         guard hud != nil else {
@@ -76,6 +147,13 @@ public class JPulseHUD: UIView {
         return true
     }
     
+    /**
+     Returns HUD object if it's located in view's subviews.
+     
+     - parameter view: view to search for HUD.
+     
+     - returns: HUD object.
+     */
     public static func hudFromView(view: UIView) -> JPulseHUD? {
         let hud = view.subviews.filter { $0 is JPulseHUD }
         return hud.first as? JPulseHUD
@@ -83,13 +161,37 @@ public class JPulseHUD: UIView {
     
     //MARK: - Instance Functions
     
+    /**
+     Shows HUD in view.
+     
+     Hide HUD by calling:
+     ```
+     JPulseHUD.hide(animated: Bool)
+     ```
+     - parameter view: view to present HUD on.
+     */
     public func showInView(view: UIView) {
         view.addSubview(self)
         show()
     }
     
+    /**
+     Shows HUD on superview.
+     
+     **Important**
+     Make sure that the HUD is a subview of the view you wish to present the HUD on. Not doing so will result in the HUD not being presented.
+     
+     ```
+        let hud = JPulseHUD(frame: view.frame)
+        view.addSubview(hud) //required if calling hud.show()
+        hud.show()
+    ```
+     
+     Otherwise call `showInView(view: UIView)` for JPulseHUD to add the subview.
+     */
     public func show() {
-        let jpng = JPulseDateNumberGenerator(viewFrameWidth: frame.width, durationOffset: pulseDurationOffset)
+        let jpng = pulseNumberGenerator
+        jpng.updateSeed()
         let delay = jpng.values.reduce(0) { (delay, values: JPulseNumberGeneratorValues) -> Double in
             return pulseWithDelay(delay, seedValues: values)
         }
@@ -97,6 +199,13 @@ public class JPulseHUD: UIView {
         NSTimer.scheduledTimerWithTimeInterval(delay, target: self, selector: #selector(updateSeedSelector), userInfo: jTimerObject, repeats: true)
     }
     
+    /**
+     Hides HUD.
+     
+     - parameter animated: animates HUD by fading out based on `hideAnimationDuration`.
+     
+     - returns: Bool indicating if HUD was successfully removed.
+     */
     public func hide(animated: Bool) -> Bool {
         if let view = superview {
             return JPulseHUD.removeHUDFromView(view, animated: animated)
@@ -106,17 +215,15 @@ public class JPulseHUD: UIView {
     
     //MARK: - Internal Instances Functions
     
-    internal func removeFromSuperViewAnimated(animated: Bool, completion: JPulseHUDCompletion? = nil) {
+    internal func removeFromSuperViewAnimated(animated: Bool) {
         if animated {
             UIView.animateWithDuration(hideAnimationDuration, delay: 0, options: .CurveEaseOut, animations: { [weak self] in
                 self?.alpha = 0
             }) { [weak self] (_) in
                 self?.removeFromSuperview()
-                completion?()
             }
         } else {
             removeFromSuperview()
-            completion?()
         }
     }
     
@@ -150,8 +257,6 @@ public class JPulseHUD: UIView {
         return delay + seedValues.2
     }
 }
-
-internal var animationTimingFunction = CAMediaTimingFunction(controlPoints: 0.23, 1.0, 0.32, 1.0)
 
 internal class JPulseLayer: CAShapeLayer {
     
@@ -192,7 +297,7 @@ internal class JPulseLayer: CAShapeLayer {
 public class JPulseDateNumberGenerator: JPulseNumberGenerator {
     
     public var seed: AnyObject = NSDate()
-    public var seedString: String {
+    private var seedString: String {
         let seconds = seed.timeIntervalSince1970 % 1.0
         let secondsString = "\(seconds)"
         return secondsString.substringFromIndex(secondsString.startIndex.advancedBy(2))
@@ -203,9 +308,9 @@ public class JPulseDateNumberGenerator: JPulseNumberGenerator {
     }
     
     public var durationOffset = 0.0
-    private let width: CGFloat
+    public var width: CGFloat = 0
     
-    public init(viewFrameWidth: CGFloat, durationOffset: Double) {
+    public init(viewFrameWidth: CGFloat = 0, durationOffset: Double = 0) {
         width = viewFrameWidth
         self.durationOffset = durationOffset
     }
@@ -214,7 +319,7 @@ public class JPulseDateNumberGenerator: JPulseNumberGenerator {
         seed = NSDate()
     }
     
-    public func calculateValues(seed: AnyObject) -> [JPulseNumberGeneratorValues] {
+    private func calculateValues(seed: AnyObject) -> [JPulseNumberGeneratorValues] {
         guard let seedString = seed as? String else {
             fatalError("Error with seed -> \(seed)")
         }
