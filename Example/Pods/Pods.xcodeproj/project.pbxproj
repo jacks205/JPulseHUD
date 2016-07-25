@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01D7EBA13C1298739155A96933CFF612 /* Pods-JPulseHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E15365913C232489BE5ED7DED08B3 /* Pods-JPulseHUD_Example-dummy.m */; };
-		06BC48CFA8596C8F6FF6E5623EBA6DFF /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0084F3C6AA952B39C13FEDC66D607 /* ReplaceMe.swift */; };
 		0794D61F210A1792E65FFFA784029D93 /* JPulseHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D80AA0681E3DF7DE4A033998037CA /* JPulseHUD-dummy.m */; };
 		445854159E59DF922B276C0F59160614 /* JPulseHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57DF979E984A8F10E2F5BA477B8C7D1E /* JPulseHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46F9751464F8FF9904CC6C6876800624 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -16,6 +15,7 @@
 		9F020EE310E7D35BD1CED714BFBF1871 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		A4D0A3B77E5D7302B127ED3DC2BB577A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		BD196AE5F1B4FD91D4D4A7C218B21B58 /* Pods-JPulseHUD_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E76D3E3F99ACCDE52E13B0B92A8F42 /* Pods-JPulseHUD_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAB7F5EC1D457B750071729A /* JPulseHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7F5EB1D457B750071729A /* JPulseHUD.swift */; };
 		F770DC5151F5A0CDC26BAC568D63E60D /* Pods-JPulseHUD_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A86747267713DAD33FF21C3EE793C4F5 /* Pods-JPulseHUD_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,6 @@
 		57DF979E984A8F10E2F5BA477B8C7D1E /* JPulseHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPulseHUD-umbrella.h"; sourceTree = "<group>"; };
 		6246552909B3E67D1B9A378D38AE9839 /* JPulseHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JPulseHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		675E57EC2904A555604B92CC771B1763 /* Pods-JPulseHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JPulseHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		69A0084F3C6AA952B39C13FEDC66D607 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		7164C75EA92EB6EB75362E904352467C /* Pods-JPulseHUD_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JPulseHUD_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		76D89D69D58F78C6D72EDD7A520BF5FB /* Pods_JPulseHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JPulseHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79575FA003887984D843CA0B5D64E1A8 /* JPulseHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JPulseHUD-prefix.pch"; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		D959D0E0C43C0DCBF1D8F76705B66817 /* Pods-JPulseHUD_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPulseHUD_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DC9E4B8D8BCCCC042FD0A90C7F7FBC60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPulseHUD.xcconfig; sourceTree = "<group>"; };
+		EAB7F5EB1D457B750071729A /* JPulseHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPulseHUD.swift; sourceTree = "<group>"; };
 		EB557FC4AA604D243D1D72917C965B7F /* Pods-JPulseHUD_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPulseHUD_Tests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 		1AFE566F1482E1493C7563197405A38F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				69A0084F3C6AA952B39C13FEDC66D607 /* ReplaceMe.swift */,
+				EAB7F5EB1D457B750071729A /* JPulseHUD.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -337,8 +337,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB7F5EC1D457B750071729A /* JPulseHUD.swift in Sources */,
 				0794D61F210A1792E65FFFA784029D93 /* JPulseHUD-dummy.m in Sources */,
-				06BC48CFA8596C8F6FF6E5623EBA6DFF /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -584,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

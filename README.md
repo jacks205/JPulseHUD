@@ -22,7 +22,7 @@ pod "JPulseHUD"
 
 ## Author
 
-Mark Jackson, jacks205@mail.chapman.edu
+Mark Jackson, markjacks205@gmail.com
 
 ## License
 
