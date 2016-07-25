@@ -276,6 +276,7 @@ internal class JPulseLayer: CAShapeLayer {
         animation.toValue = UIBezierPath(ovalInRect: CGRect(origin: CGPoint(x: center.x - radius / 2, y: center.y - radius / 2), size: CGSize(width: radius, height: radius))).CGPath
         animation.duration = duration
         animation.removedOnCompletion = true
+        animation.delegate = self
         animation.beginTime = CACurrentMediaTime() + delay
         animation.fillMode = kCAFillModeForwards
         animation.timingFunction = animationTimingFunction
@@ -291,6 +292,12 @@ internal class JPulseLayer: CAShapeLayer {
         colorAnim.fillMode = kCAFillModeForwards
         colorAnim.timingFunction = animationTimingFunction
         addAnimation(colorAnim, forKey: colorAnim.keyPath)
+    }
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            removeFromSuperlayer()
+        }
     }
 }
 
