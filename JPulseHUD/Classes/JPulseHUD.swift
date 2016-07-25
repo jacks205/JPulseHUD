@@ -8,31 +8,8 @@
 
 import UIKit
 
-/// Tuple that represents the required values of an class extending JPulseNumberGenerator.
-/// - parameter radius: Describes the max size of the pulse circle layer.
-/// - parameter duration: The duration of the layer animation.
-/// - parameter delay: The delay of when the layer enimation will execute.
-/// - parameter opacity: Opacity of the layer.
-public typealias JPulseNumberGeneratorValues = (radius: CGFloat, duration: Double, delay: Double, opacity: CGFloat)
-
 /// Default pulse timing animation. Can be changed through `JPulseHUD`.
 internal var animationTimingFunction = CAMediaTimingFunction(controlPoints: 0.23, 1.0, 0.32, 1.0)
-
-/**
- *  Protocol for constructing a custom sequence of values to determine the pulse rhythm.
- */
-public protocol JPulseNumberGenerator {
-    /// Seed object that will determine the random sequence of values.
-    var seed: AnyObject { get set }
-    
-    /// Values generated based off seed.
-    var values: [JPulseNumberGeneratorValues] { get }
-    
-    /**
-     Updates the seed. Can leave blank if seed doesn't require to be updated.
-     */
-    func updateSeed()
-}
 
 /**
    Displays a transparent view over its superview and emits a circle pulse animation.
@@ -255,90 +232,6 @@ public class JPulseHUD: UIView {
     internal func pulseWithDelay(delay: Double, seedValues: JPulseNumberGeneratorValues) -> Double {
         pulse(seedValues.0, duration: seedValues.1, delay: delay, fillColor: UIColor(white: 1, alpha: seedValues.3))
         return delay + seedValues.2
-    }
-}
-
-internal class JPulseLayer: CAShapeLayer {
-    
-    convenience init(timingFunction: CAMediaTimingFunction) {
-        self.init()
-        animationTimingFunction = timingFunction
-    }
-    
-    func pulse(center: CGPoint, radius: CGFloat, duration: CFTimeInterval, delay: Double, fillColor: UIColor) {
-        animatePath(center, radius: radius, duration: duration, delay: delay)
-        animateColor(duration, delay: delay)
-    }
-    
-    private func animatePath(center: CGPoint, radius: CGFloat, duration: CFTimeInterval, delay: Double) {
-        let animation = CABasicAnimation(keyPath: "path")
-        animation.fromValue = UIBezierPath(ovalInRect: CGRect(origin: center, size: CGSizeZero)).CGPath
-        animation.toValue = UIBezierPath(ovalInRect: CGRect(origin: CGPoint(x: center.x - radius / 2, y: center.y - radius / 2), size: CGSize(width: radius, height: radius))).CGPath
-        animation.duration = duration
-        animation.removedOnCompletion = true
-        animation.delegate = self
-        animation.beginTime = CACurrentMediaTime() + delay
-        animation.fillMode = kCAFillModeForwards
-        animation.timingFunction = animationTimingFunction
-        addAnimation(animation, forKey: animation.keyPath)
-    }
-    
-    private func animateColor(duration: CFTimeInterval, delay: Double) {
-        let colorAnim = CABasicAnimation(keyPath: "fillColor")
-        colorAnim.toValue = UIColor.clearColor().CGColor
-        colorAnim.duration = duration
-        colorAnim.removedOnCompletion = true
-        colorAnim.beginTime = CACurrentMediaTime() + delay
-        colorAnim.fillMode = kCAFillModeForwards
-        colorAnim.timingFunction = animationTimingFunction
-        addAnimation(colorAnim, forKey: colorAnim.keyPath)
-    }
-    
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if flag {
-            removeFromSuperlayer()
-        }
-    }
-}
-
-public class JPulseDateNumberGenerator: JPulseNumberGenerator {
-    
-    public var seed: AnyObject = NSDate()
-    private var seedString: String {
-        let seconds = seed.timeIntervalSince1970 % 1.0
-        let secondsString = "\(seconds)"
-        return secondsString.substringFromIndex(secondsString.startIndex.advancedBy(2))
-    }
-    
-    public var values: [JPulseNumberGeneratorValues] {
-        return calculateValues(seedString)
-    }
-    
-    public var durationOffset = 0.0
-    public var width: CGFloat = 0
-    
-    public init(viewFrameWidth: CGFloat = 0, durationOffset: Double = 0) {
-        width = viewFrameWidth
-        self.durationOffset = durationOffset
-    }
-    
-    public func updateSeed() {
-        seed = NSDate()
-    }
-    
-    private func calculateValues(seed: AnyObject) -> [JPulseNumberGeneratorValues] {
-        guard let seedString = seed as? String else {
-            fatalError("Error with seed -> \(seed)")
-        }
-        let randomValues = seedString.unicodeScalars.enumerate().map { (index, char) -> JPulseNumberGeneratorValues in
-            let unicodeFloat = CGFloat(char.value)
-            let delay = Double((unicodeFloat - 48.0) / 10.0)
-            let opacity = delay > 0 ? CGFloat(delay) : 0.1
-            let radius = index % 2 == 0 ? CGFloat(delay) * width : CGFloat(delay) / 2 * width
-            let duration = Double(delay * 10) + durationOffset
-            return (radius, duration, delay, opacity)
-        }
-        return randomValues
     }
 }
 
