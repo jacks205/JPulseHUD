@@ -11,6 +11,8 @@ JPulseHUD is a drop in class for displaying a translucent view over a controller
 <img src="https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud2.gif" width="240"/>
 <img src="https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud1.gif" width="240"/>
 
+Each time the JPulseHUD is shown, the pulse animation is unique due to the `JPulseNumberGenerator` that generates a new sequence of values to determine the pulses radius, duration, opacity, etc.
+
 ## Example
 
 To run the example project, clone the repo, and open the workspace project in Xcode.
@@ -122,6 +124,10 @@ public protocol JPulseNumberGenerator {
 
 Create your own JPulseNumberGenerator and replace the default `pulseNumberGenerator` in JPulseHUD before presenting.
 
+## TODO
+- Tests
+- RxSwift extensions
+- `JPulseNumberGenerator` example
 
 ## Author
 
