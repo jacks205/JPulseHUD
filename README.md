@@ -1,6 +1,6 @@
 # JPulseHUD
 
-[![CI Status](http://img.shields.io/travis/Mark Jackson/JPulseHUD.svg?style=flat)](https://travis-ci.org/Mark Jackson/JPulseHUD)
+[![CI Status](http://img.shields.io/travis/jacks205/JPulseHUD.svg?style=flat)](https://travis-ci.org/jacks205/JPulseHUD)
 [![Version](https://img.shields.io/cocoapods/v/JPulseHUD.svg?style=flat)](http://cocoapods.org/pods/JPulseHUD)
 [![License](https://img.shields.io/cocoapods/l/JPulseHUD.svg?style=flat)](http://cocoapods.org/pods/JPulseHUD)
 [![Platform](https://img.shields.io/cocoapods/p/JPulseHUD.svg?style=flat)](http://cocoapods.org/pods/JPulseHUD)
