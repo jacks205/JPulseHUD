@@ -5,19 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/JPulseHUD.svg?style=flat)](http://cocoapods.org/pods/JPulseHUD)
 [![Platform](https://img.shields.io/cocoapods/p/JPulseHUD.svg?style=flat)](http://cocoapods.org/pods/JPulseHUD)
 
-JPulseHUD is a drop in class for displaying a translucent view over a controller when work is being done on a background thread or you're awaiting the result of a network request. This HUD was inspired by [Acorns](https://www.acorns.com/) similar pulse animations within the iOS app.
+JPulseHUD is a drop in class for displaying a translucent view over a controller when work is being done on a background thread or you're awaiting the result of a network request. This HUD was inspired by [Acorns](https://www.acorns.com/) similar pulse animation within their iOS app.
 
-<!--![Demo Image 1](images/jpulsehud1.png)-->
-<!--![Demo Gif 1](images/jpulsehud1.gif)-->
-<!--![Demo Gif 2](images/jpulsehud2.gif)-->
-
-<img src="images/jpulsehud1.png" width="160"/>
-<img src="images/jpulsehud1.gif" width="160"/>
-<img src="images/jpulsehud2.gif" width="160"/>
+<img src="https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud1.png" width="240"/>
+<img src="https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud2.gif" width="240"/>
+<img src="https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud1.gif" width="240"/>
 
 ## Example
 
-To run the example project, clone the repo, and open the workspace project.
+To run the example project, clone the repo, and open the workspace project in Xcode.
 
 ## Requirements
 

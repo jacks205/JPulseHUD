@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'JPulseHUD'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of JPulseHUD.'
+  s.summary          = 'Drop-in HUD for loading content from a background thread.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+JPulseHUD is a drop in class for displaying a translucent view over a controller when work is being done on a background thread or you're awaiting the result of a network request. This HUD was inspired by Acorns similar pulse animation within their iOS app.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/JPulseHUD'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/jacks205/JPulseHUD'
+  s.screenshots     = 'https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud1.png', 'https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud2.gif', 'https://raw.githubusercontent.com/jacks205/JPulseHUD/master/image/jpulsehud1.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mark Jackson' => 'markjacks205@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/JPulseHUD.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/jacks205/JPulseHUD.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/mjacks205'
 
   s.ios.deployment_target = '8.0'
 
