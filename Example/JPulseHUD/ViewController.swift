@@ -63,15 +63,19 @@ class ViewController: UIViewController {
     
     func addHUDStaticClick(sender: AnyObject) {
         JPulseHUD.addHUDToView(view)
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(20 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            JPulseHUD.removeHUDFromView(self.view, animated: true)
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            // do some task
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(20 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                JPulseHUD.removeHUDFromView(self.view, animated: true)
+            }
         }
     }
     
     func addHUDInstanceClick(sender: AnyObject) {
         let hud = JPulseHUD(frame: view.frame)
-        hud.pulseDurationOffset = 5
+        hud.pulseDurationOffset = -0.1
         hud.pulseFillColor = UIColor.redColor()
         hud.timingFunction = CAMediaTimingFunction(controlPoints: 0, 1, 1, 0.5)
         hud.showInView(view)
