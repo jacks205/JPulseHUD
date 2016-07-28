@@ -46,7 +46,7 @@ public class JPulseDateNumberGenerator: JPulseNumberGenerator {
     public var width: CGFloat = 0
     
     public init(viewFrameWidth: CGFloat = 0, durationOffset: Double = 0) {
-        width = viewFrameWidth
+        width = viewFrameWidth / 5
         self.durationOffset = durationOffset
     }
     
@@ -62,7 +62,7 @@ public class JPulseDateNumberGenerator: JPulseNumberGenerator {
             let unicodeFloat = CGFloat(char.value)
             let delay = Double((unicodeFloat - 48.0) / 10.0)
             let opacity = delay > 0 ? CGFloat(delay) : 0.1
-            let radius = index % 2 == 0 ? CGFloat(delay) * width : CGFloat(delay) / 2 * width
+            let radius = index % 2 == 0 ? CGFloat(delay) * width / 1.5 : CGFloat(delay) / 2 * width / 1.5
             let duration = Double(delay * 10) + durationOffset
             return (radius, duration, delay, opacity)
         }

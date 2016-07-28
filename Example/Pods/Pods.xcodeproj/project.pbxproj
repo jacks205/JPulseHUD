@@ -15,6 +15,8 @@
 		9F020EE310E7D35BD1CED714BFBF1871 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		A4D0A3B77E5D7302B127ED3DC2BB577A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		BD196AE5F1B4FD91D4D4A7C218B21B58 /* Pods-JPulseHUD_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E76D3E3F99ACCDE52E13B0B92A8F42 /* Pods-JPulseHUD_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA37327E1D460B18000553D8 /* JPulseNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA37327D1D460B18000553D8 /* JPulseNumberGenerator.swift */; };
+		EA3732801D460B66000553D8 /* JPulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA37327F1D460B66000553D8 /* JPulseLayer.swift */; };
 		EAB7F5EC1D457B750071729A /* JPulseHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7F5EB1D457B750071729A /* JPulseHUD.swift */; };
 		F770DC5151F5A0CDC26BAC568D63E60D /* Pods-JPulseHUD_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A86747267713DAD33FF21C3EE793C4F5 /* Pods-JPulseHUD_Tests-dummy.m */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		D959D0E0C43C0DCBF1D8F76705B66817 /* Pods-JPulseHUD_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JPulseHUD_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DC9E4B8D8BCCCC042FD0A90C7F7FBC60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8BF16F03DEB1E4835F49F45EDAA0A3D /* JPulseHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JPulseHUD.xcconfig; sourceTree = "<group>"; };
+		EA37327D1D460B18000553D8 /* JPulseNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPulseNumberGenerator.swift; sourceTree = "<group>"; };
+		EA37327F1D460B66000553D8 /* JPulseLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPulseLayer.swift; sourceTree = "<group>"; };
 		EAB7F5EB1D457B750071729A /* JPulseHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPulseHUD.swift; sourceTree = "<group>"; };
 		EB557FC4AA604D243D1D72917C965B7F /* Pods-JPulseHUD_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JPulseHUD_Tests-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				EAB7F5EB1D457B750071729A /* JPulseHUD.swift */,
+				EA37327D1D460B18000553D8 /* JPulseNumberGenerator.swift */,
+				EA37327F1D460B66000553D8 /* JPulseLayer.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3732801D460B66000553D8 /* JPulseLayer.swift in Sources */,
+				EA37327E1D460B18000553D8 /* JPulseNumberGenerator.swift in Sources */,
 				EAB7F5EC1D457B750071729A /* JPulseHUD.swift in Sources */,
 				0794D61F210A1792E65FFFA784029D93 /* JPulseHUD-dummy.m in Sources */,
 			);

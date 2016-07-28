@@ -58,6 +58,16 @@ public class JPulseHUD: UIView {
         }
     }
     
+    /// Point offset for the pulse animation from the frame center.
+    ///
+    /// Default: CGPoint(x: 0, y: -frame.height / 8)
+    public var pulseOffset: CGPoint
+    
+    /// Fill color for the pulse layer.
+    ///
+    /// Default: UIColor.whiteColor()
+    public var pulseFillColor: UIColor = UIColor.whiteColor()
+    
     /// Custom JPulseNumberGenerator for building custom number sequences for the pulse animation.
     ///
     /// Default: `JPulseDateNumberGenerator()`
@@ -66,13 +76,13 @@ public class JPulseHUD: UIView {
     //MARK: - Initializers
     
     override public init(frame: CGRect) {
+        pulseOffset = CGPoint(x: 0, y: -frame.height / 8)
         super.init(frame: frame)
         initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialize()
+        fatalError("Coder initializer not implemented.")
     }
     
     /**
@@ -207,8 +217,9 @@ public class JPulseHUD: UIView {
     internal func pulse(radius: CGFloat, duration: CFTimeInterval, delay: Double = 0, fillColor: UIColor = UIColor(white: 1, alpha: 0.2)) {
         let layer = JPulseLayer()
         layer.frame = frame
-        layer.bounds = bounds
-        layer.position = center
+        var layerCenter = center
+        layerCenter = CGPoint(x: layerCenter.x + pulseOffset.x, y: layerCenter.y + pulseOffset.y)
+        layer.position = layerCenter
         layer.fillColor = fillColor.CGColor
         self.layer.addSublayer(layer)
         layer.pulse(center, radius: radius, duration: duration, delay: delay, fillColor: fillColor)
@@ -230,7 +241,7 @@ public class JPulseHUD: UIView {
     }
     
     internal func pulseWithDelay(delay: Double, seedValues: JPulseNumberGeneratorValues) -> Double {
-        pulse(seedValues.0, duration: seedValues.1, delay: delay, fillColor: UIColor(white: 1, alpha: seedValues.3))
+        pulse(seedValues.0, duration: seedValues.1, delay: delay, fillColor: pulseFillColor.colorWithAlphaComponent(seedValues.3))
         return delay + seedValues.2
     }
 }

@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     
     func addHUDStaticClick(sender: AnyObject) {
         JPulseHUD.addHUDToView(view)
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(8 * Double(NSEC_PER_SEC)))
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(20 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             JPulseHUD.removeHUDFromView(self.view, animated: true)
         }
@@ -72,6 +72,8 @@ class ViewController: UIViewController {
     func addHUDInstanceClick(sender: AnyObject) {
         let hud = JPulseHUD(frame: view.frame)
         hud.pulseDurationOffset = 5
+        hud.pulseFillColor = UIColor.redColor()
+        hud.timingFunction = CAMediaTimingFunction(controlPoints: 0, 1, 1, 0.5)
         hud.showInView(view)
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(8 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
@@ -80,18 +82,25 @@ class ViewController: UIViewController {
     }
     
     func timingFncEaseInClick(sender: AnyObject) {
-        JPulseHUD.addHUDToView(view)
+        let hud = JPulseHUD(frame: view.frame)
+        hud.hideAnimationDuration = 5
+        hud.pulseDurationOffset = 2
+        hud.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        hud.showInView(view)
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(8 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
-            JPulseHUD.removeHUDFromView(self.view, animated: true)
+            hud.hide(true)
         }
     }
     
     func timingFncEaseInOutClick(sender: AnyObject) {
-        JPulseHUD.addHUDToView(view)
+        let hud = JPulseHUD(frame: view.frame)
+        hud.pulseFillColor = UIColor(red: 0.4, green: 0.2, blue: 0.6, alpha: 1)
+        hud.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        hud.showInView(view)
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(8 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
-            JPulseHUD.removeHUDFromView(self.view, animated: true)
+            hud.hide(true)
         }
     }
     
